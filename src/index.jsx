@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { Component, PureComponent } from 'react';
 
 const defaultAnchor = { x: 0.5, y: 0.5 };
-const defaultBorderColor = '#f00';
 const defaultBorderStyle = 'solid';
 const defaultBorderWidth = 1;
 
@@ -229,9 +228,9 @@ export class Line extends PureComponent {
         };
 
         const defaultStyle = {
-            borderTopColor: this.props.borderColor || undefined,
-            borderTopStyle: this.props.borderStyle || undefined,
-            borderTopWidth: this.props.borderWidth || undefined,
+            borderTopColor: this.props.borderColor,
+            borderTopStyle: this.props.borderStyle || defaultBorderStyle,
+            borderTopWidth: this.props.borderWidth || defaultBorderWidth,
         };
 
         const props = {

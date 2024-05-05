@@ -156,7 +156,6 @@ var defaultAnchor = {
   x: 0.5,
   y: 0.5
 };
-var defaultBorderColor = '#f00';
 var defaultBorderStyle = 'solid';
 var defaultBorderWidth = 1;
 var optionalStyleProps = {
@@ -477,7 +476,7 @@ var Line = /*#__PURE__*/function (_PureComponent) {
         transformOrigin: '0 0'
       };
       var defaultStyle = {
-        borderTopColor: this.props.borderColor || defaultBorderColor,
+        borderTopColor: this.props.borderColor,
         borderTopStyle: this.props.borderStyle || defaultBorderStyle,
         borderTopWidth: this.props.borderWidth || defaultBorderWidth
       };
@@ -544,10 +543,6 @@ var SteppedLine = /*#__PURE__*/function (_PureComponent2) {
         }));
       }
 
-      if (dx === 0) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Line, this.props);
-      }
-
       var borderWidth = this.props.borderWidth || defaultBorderWidth;
       var y2 = Math.round((y0 + y1) / 2);
       var xOffset = dx > 0 ? borderWidth : 0;
@@ -588,10 +583,6 @@ var SteppedLine = /*#__PURE__*/function (_PureComponent2) {
           x1: x1,
           y1: y0
         }));
-      }
-
-      if (dy === 0) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Line, this.props);
       }
 
       var borderWidth = this.props.borderWidth || defaultBorderWidth;
