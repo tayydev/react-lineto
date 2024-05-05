@@ -229,9 +229,9 @@ export class Line extends PureComponent {
         };
 
         const defaultStyle = {
-            borderTopColor: this.props.borderColor || defaultBorderColor,
-            borderTopStyle: this.props.borderStyle || defaultBorderStyle,
-            borderTopWidth: this.props.borderWidth || defaultBorderWidth,
+            borderTopColor: this.props.borderColor || undefined,
+            borderTopStyle: this.props.borderStyle || undefined,
+            borderTopWidth: this.props.borderWidth || undefined,
         };
 
         const props = {
