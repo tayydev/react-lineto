@@ -162,6 +162,9 @@ export default class LineTo extends Component {
     }
 
     render() {
+        if (typeof window === 'undefined' || typeof document === 'undefined') {
+            return <div></div>
+        }
         const points = this.detect();
         return points ? (
             <Line {...points} {...this.props} />
